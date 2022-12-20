@@ -2,6 +2,7 @@ import './styles.css';
 import { homePage } from './home-page';
 import { menuPage } from './menu-page';
 import { contactPage } from './contact-page';
+import { render } from './components';
 
 const runPage = (function() {
 
@@ -36,7 +37,8 @@ const runPage = (function() {
     document.getElementById('btn2').addEventListener('click', menuPage)
     document.getElementById('btn3').addEventListener('click', contactPage)
   }
-
+  
+  render()
   homePage()
  
   return { init }

@@ -26,7 +26,9 @@ export const render = () => {
   document.body.appendChild(content)
 }
 
-// --------------------------------
 export const clearDOM = () => {
-  document.body.removeChild(content)
+  let element = document.querySelector('.container');
+  while (element.lastElementChild) {
+    element.removeChild(element.lastElementChild)
+  }
 }
