@@ -5,7 +5,7 @@
 }
 
 html { 
-  background: url(./coin-background.jpg) no-repeat bottom center fixed; 
+  background: url(./imgs/coin-background.jpg) no-repeat bottom center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,6 +16,11 @@ body {
   display: grid;
   height: 100vh;
   grid-template:.16fr 2fr .16fr/ .6fr 2fr .6fr;
+}
+
+img {
+  width: 40%;
+  height: 40%;
 }
 
 .heading {

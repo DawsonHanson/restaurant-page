@@ -17,6 +17,8 @@ const runPage = (function() {
   const init = function() {
     _createElements()
     _bindEvents()
+    render()
+    homePage()
   }
 
   const _btn = function(text, i) {
@@ -38,9 +40,6 @@ const runPage = (function() {
     document.getElementById('btn3').addEventListener('click', contactPage)
   }
   
-  render()
-  homePage()
- 
   return { init }
 
 })();
