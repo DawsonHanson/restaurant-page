@@ -2,48 +2,61 @@ const content = document.createElement('div')
 content.classList.add('container')
 
 export const heading = (text) => {
+  let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let h1 = document.createElement('h1')
   h1.textContent = text
+  wrapper.classList.add('gradient-wrapper')
   element.classList.add('place-holder')
   element.appendChild(h1)
-  content.appendChild(element)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const subHeading = (text) => {
+  let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let h2 = document.createElement('h1')
   h2.textContent = text
+  wrapper.classList.add('gradient-wrapper')
   element.classList.add('place-holder')
   element.appendChild(h2)
-  content.appendChild(element)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const reviewBlock = (review, name) => {
+  let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
   p.textContent = review
   h3.textContent = name
+  wrapper.classList.add('gradient-wrapper')
   element.classList.add('place-holder')
   element.appendChild(p)
   element.appendChild(h3)
-  content.appendChild(element)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const infoBlock = (name, info) => {
+  let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
   p.textContent = info
   h3.textContent = name
+  wrapper.classList.add('gradient-wrapper')
   element.classList.add('place-holder')
   element.appendChild(h3)
   element.appendChild(p)
-  content.appendChild(element)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const menuItem = (name, info, price, imgSrc) => {
+  let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
@@ -53,17 +66,20 @@ export const menuItem = (name, info, price, imgSrc) => {
   h3.textContent = name
   h4.textContent = `$${price}`
   img.src = imgSrc
+  wrapper.classList.add('gradient-wrapper')
   element.classList.add('place-holder')
   element.appendChild(h3)
   element.appendChild(p)
   element.appendChild(h4)
   element.appendChild(img)
-  content.appendChild(element)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const contactInfoBlock = (name, position, number, email, imgSrc) => {
-  let element1 = document.createElement('div')
-  let element2 = document.createElement('div')
+  let wrapper = document.createElement('div')
+  let element = document.createElement('div')
+  let contactInfo = document.createElement('div')
   let p1 = document.createElement('p')
   let p2 = document.createElement('p')
   let p3 = document.createElement('p')
@@ -74,15 +90,17 @@ export const contactInfoBlock = (name, position, number, email, imgSrc) => {
   p3.textContent = email
   h3.textContent = name
   img.src = imgSrc
-  element1.classList.add('place-holder')
-  element2.classList.add('contact-info')
-  element2.appendChild(p1)
-  element2.appendChild(p2)
-  element2.appendChild(p3)
-  element1.appendChild(h3)
-  element1.appendChild(element2)
-  element1.appendChild(img)
-  content.appendChild(element1)
+  wrapper.classList.add('gradient-wrapper')
+  element.classList.add('place-holder')
+  contactInfo.classList.add('contact-info')
+  contactInfo.appendChild(p1)
+  contactInfo.appendChild(p2)
+  contactInfo.appendChild(p3)
+  element.appendChild(h3)
+  element.appendChild(contactInfo)
+  element.appendChild(img)
+  wrapper.appendChild(element)
+  content.appendChild(wrapper)
 }
 
 export const render = () => {

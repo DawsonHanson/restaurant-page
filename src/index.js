@@ -6,9 +6,9 @@ import { render } from './components';
 
 const runPage = (function() {
 
-  const headingElement = document.createElement('div')
-  headingElement.classList.add('heading')
-  document.body.appendChild(headingElement)
+  const headerElement = document.createElement('div')
+  headerElement.classList.add('header')
+  document.body.appendChild(headerElement)
 
   const footerElement = document.createElement('div')
   footerElement.classList.add('footer')
@@ -25,7 +25,7 @@ const runPage = (function() {
     let btn = document.createElement('button')
     btn.id = `btn${i}`
     btn.textContent = text
-    headingElement.appendChild(btn)
+    headerElement.appendChild(btn)
   }
 
   const _createElements = function() {

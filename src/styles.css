@@ -4,6 +4,17 @@
   margin: 0%;
 }
 
+:root {
+  --blue: #a6c9c9;
+  --green: #c9e4ad;
+  --orange: #ffc440;
+  --light-orange: #fce59a;
+  --dark-orange: #f27a01;
+  --white: white;
+  --black: black;
+  --gradient: red, orange, yellow, green, blue, indigo, violet; 
+}
+
 html { 
   background: url(./imgs/coin-background.jpg) no-repeat bottom center fixed; 
   -webkit-background-size: cover;
@@ -15,7 +26,7 @@ html {
 body {
   display: grid;
   height: 100vh;
-  grid-template:.16fr 2fr .16fr/ .6fr 2fr .6fr;
+  grid-template: 56px 20px 2fr 20px 56px/ .6fr 2fr .6fr;
 }
 
 img {
@@ -23,23 +34,57 @@ img {
   height: 40%;
 }
 
-.heading {
+button {
+  all: unset;
+  text-align: center;
+  width: 86px;
+  height: 43px;
+  color: var(--black);
+  background-color: var(--orange);
+  border: 3px solid var(--dark-orange);
+  border-radius: 9px;
+}
+
+button:hover {
+  background-color: var(--light-orange);
+}
+
+button:focus {
+  border-color: var(--black);
+}
+
+.header {
   display: flex;
   justify-content: center;
-  grid-area: 1/ 1/ 2 / 4;
-  background-color: bisque;
+  align-items: center;
+  gap: 14px;
+  grid-area: 1/ 1/ 2/ 4;
+  background-color: var(--green);
 }
 
 .footer {
-  grid-area: 3/ 1/ 4/ 4;
-  background-color: bisque;
+  grid-area: 5/ 1/ 6/ 4;
+  background-color: var(--green);
 }
 
 .container {
-  grid-area: 2 / 2/ 3/ 3;
   display: grid;
-  grid-template-rows: .3fr repeat(5, 1fr);
-  background-color: aqua;
+  grid-area: 3 / 2/ 4/ 3;
+  grid-template-rows: auto;
+  background-color: var(--blue);
+  padding: 6px;
+  border-radius: 18px;
+}
+
+.gradient-wrapper {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 80%;
+  width: 80%;
+  background: linear-gradient(to right, var(--gradient));
+  border-radius: 18px;
+  padding: 8px;
 }
 
 .place-holder {
@@ -48,11 +93,11 @@ img {
   justify-content: center;
   justify-self: center;
   align-self: center;
-  height: 80%;
-  width: 80%;
-  color: blue;
-  background-color: green;
-  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  color: var(--white);
+  background-color: var(--black);
   border-radius: 18px;
 }
 
