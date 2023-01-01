@@ -1,26 +1,35 @@
 const content = document.createElement('div')
 content.classList.add('container')
 
-export const heading = (text) => {
+export const heading = (text, imgSrc) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let h1 = document.createElement('h1')
+  let img1 = document.createElement('img')
+  let img2 = document.createElement('img')
   h1.textContent = text
+  img1.src = imgSrc
+  img2.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
+  element.classList.add('heading')
+  element.appendChild(img1)
   element.appendChild(h1)
+  element.appendChild(img2)
   wrapper.appendChild(element)
   content.appendChild(wrapper)
 }
 
-export const subHeading = (text) => {
+export const subHeading = (text, imgSrc) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let h2 = document.createElement('h1')
+  let img = document.createElement('img')
   h2.textContent = text
+  img.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
+  element.classList.add('sub-heading')
   element.appendChild(h2)
+  element.appendChild(img)
   wrapper.appendChild(element)
   content.appendChild(wrapper)
 }
@@ -58,6 +67,8 @@ export const infoBlock = (name, info) => {
 export const menuItem = (name, info, price, imgSrc) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
+  let subElement1 = document.createElement('div')
+  let subElement2 = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
   let h4 = document.createElement('h4')
@@ -67,11 +78,13 @@ export const menuItem = (name, info, price, imgSrc) => {
   h4.textContent = `$${price}`
   img.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
-  element.appendChild(h3)
-  element.appendChild(p)
-  element.appendChild(h4)
-  element.appendChild(img)
+  element.classList.add('menu-item-container')
+  subElement1.appendChild(h3)
+  subElement1.appendChild(p)
+  subElement2.appendChild(h4)
+  subElement2.appendChild(img)
+  element.appendChild(subElement1)
+  element.appendChild(subElement2)
   wrapper.appendChild(element)
   content.appendChild(wrapper)
 }
