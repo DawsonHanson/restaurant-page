@@ -34,15 +34,18 @@ export const subHeading = (text, imgSrc) => {
   content.appendChild(wrapper)
 }
 
-export const reviewBlock = (review, name) => {
+export const reviewBlock = (review, name, imgSrc) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
+  let img = document.createElement('img')
   p.textContent = review
   h3.textContent = name
+  img.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
+  element.classList.add('review-block')
+  element.appendChild(img)
   element.appendChild(p)
   element.appendChild(h3)
   wrapper.appendChild(element)
@@ -57,7 +60,7 @@ export const infoBlock = (name, info) => {
   p.textContent = info
   h3.textContent = name
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
+  element.classList.add('info-block')
   element.appendChild(h3)
   element.appendChild(p)
   wrapper.appendChild(element)
@@ -104,8 +107,7 @@ export const contactInfoBlock = (name, position, number, email, imgSrc) => {
   h3.textContent = name
   img.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
-  element.classList.add('place-holder')
-  contactInfo.classList.add('contact-info')
+  element.classList.add('contact-info')
   contactInfo.appendChild(p1)
   contactInfo.appendChild(p2)
   contactInfo.appendChild(p3)

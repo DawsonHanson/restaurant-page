@@ -25,6 +25,9 @@ const runPage = (function() {
     let btn = document.createElement('button')
     btn.id = `btn${i}`
     btn.textContent = text
+    if (btn.id == 'btn1') {
+      btn.classList.add('black-border')
+    }
     headerElement.appendChild(btn)
   }
 
@@ -34,10 +37,32 @@ const runPage = (function() {
     _btn('Contact', 3)
   }
 
+  const _changeButtonBorder = function (a, b, c) {
+    document.getElementById(`btn${a}`).classList.add('black-border')
+    document.getElementById(`btn${b}`).classList.remove('black-border')
+    document.getElementById(`btn${c}`).classList.remove('black-border')
+  }
+
+  const _homeFunc = function () {
+    homePage()
+    _changeButtonBorder(1, 2, 3)
+  }
+
+  const _menuFunc = function () {
+    menuPage()
+    _changeButtonBorder(2, 1, 3)
+  }
+
+  const _contactFunc = function () {
+    contactPage()
+    _changeButtonBorder(3, 1, 2)
+  }
+
+
   const _bindEvents = function() {
-    document.getElementById('btn1').addEventListener('click', homePage)
-    document.getElementById('btn2').addEventListener('click', menuPage)
-    document.getElementById('btn3').addEventListener('click', contactPage)
+    document.getElementById('btn1').addEventListener('click', _homeFunc)
+    document.getElementById('btn2').addEventListener('click', _menuFunc)
+    document.getElementById('btn3').addEventListener('click', _contactFunc)
   }
   
   return { init }
