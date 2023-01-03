@@ -166,8 +166,8 @@ button:hover {
 }
 
 .menu-item-container > div:last-child > img, .contact-info > img {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 6px;
   border: 2px solid var(--dark-orange);
 }
