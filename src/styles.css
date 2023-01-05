@@ -175,13 +175,6 @@ button:hover {
   padding: 8px;
 }
 
-.review-block > img {
-  position: absolute;
-  align-self: center;
-  margin-top: -106px;
-  width: 108px;
-}
-
 .review-block > h3, .info-block > h3 {
   font-family: 'zerpixl';
 }

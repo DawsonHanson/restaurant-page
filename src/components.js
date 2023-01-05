@@ -34,18 +34,15 @@ export const subHeading = (text, imgSrc) => {
   content.appendChild(wrapper)
 }
 
-export const reviewBlock = (review, name, imgSrc) => {
+export const reviewBlock = (review, name) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
   let p = document.createElement('p')
   let h3 = document.createElement('h3')
-  let img = document.createElement('img')
   p.textContent = review
   h3.textContent = name
-  img.src = imgSrc
   wrapper.classList.add('gradient-wrapper')
   element.classList.add('review-block')
-  element.appendChild(img)
   element.appendChild(p)
   element.appendChild(h3)
   wrapper.appendChild(element)
