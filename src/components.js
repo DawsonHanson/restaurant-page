@@ -22,7 +22,7 @@ export const heading = (text, imgSrc) => {
 export const subHeading = (text, imgSrc) => {
   let wrapper = document.createElement('div')
   let element = document.createElement('div')
-  let h2 = document.createElement('h1')
+  let h2 = document.createElement('h2')
   let img = document.createElement('img')
   h2.textContent = text
   img.src = imgSrc
